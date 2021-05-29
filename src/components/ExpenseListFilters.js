@@ -66,7 +66,7 @@ const mapDispatchtoProps = (dispatch) => ({
     setEndDate: (endDate) => dispatch(setEndDate(endDate))
 });
 
-export default connect(mapStateToProps)(ExpenseListFilters);
+export default connect(mapStateToProps, mapDispatchtoProps)(ExpenseListFilters);
 
 /*
 Note: when we set up our form inputs, things like our text inouts and our select drop downs,
