@@ -10,10 +10,42 @@
     text-decoration: none;
 }
 
+.button--login {
+    margin-bottom: $s-size;
+    min-width: 20rem;
+    max-width: 25rem;
+}
+
+.google_login {
+    background: lighten(white, 10%);
+    color: black;
+    box-shadow: 2px 2px 4px $grey;
+}
+
+.github_login {
+    background: lighten(#0d1117, 15%);
+    box-shadow: 2px 2px 4px $grey;
+}
+
 .button--link {
     background: none;
 }
 
 .button--secondary {
     background-color: #888;
+}
+
+.button--modal {
+    @extend .button;
+    font-weight: 700;
+    background: none;
+    margin: 0 $s-size;
+}
+
+.button--modal--y {
+    color: lighten(green, 10%);
+}
+
+.button--modal--n {
+    color: darken(red, 5%);
 }
