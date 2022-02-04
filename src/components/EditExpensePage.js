@@ -8,6 +8,14 @@ export class EditExpensePage extends React.Component {
   state = {
     modalOpen: false
   };
+
+  componentDidMount() {
+    this.setState({ modalOpen: true });
+    setTimeout(() => {
+      this.setState({ modalOpen: false });
+    }, 50)
+  }
+
   onSubmit = (expense) => {
     this.props.startEditExpense(this.props.expense.id, expense);
     this.props.history.push('/');
@@ -35,6 +43,7 @@ export class EditExpensePage extends React.Component {
           <ExpenseForm
             expense={this.props.expense}
             onSubmit={this.onSubmit}
+            history={this.props.history}
           />
           <button className=" button button--secondary" onClick={this.onClick}>Remove Expense</button>
         </div>
