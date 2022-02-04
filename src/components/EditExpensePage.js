@@ -9,16 +9,9 @@ export class EditExpensePage extends React.Component {
     modalOpen: false
   };
 
-  componentDidMount() {
-    this.setState({ modalOpen: true });
-    setTimeout(() => {
-      this.setState({ modalOpen: false });
-    }, 50)
-  }
-
   onSubmit = (expense) => {
     this.props.startEditExpense(this.props.expense.id, expense);
-    this.props.history.push('/');
+    this.props.history.push('/dashboard');
   };
   onClick = () => {
     this.setState(() => ({ modalOpen: true }));
@@ -26,7 +19,7 @@ export class EditExpensePage extends React.Component {
   onRemove = () => {
     this.handleClearRemoveModal();
     this.props.startRemoveExpense({ id: this.props.expense.id });
-    this.props.history.push('/');
+    this.props.history.push('/dashboard');
   };
   handleClearRemoveModal = () => {
     this.setState(() => ({ modalOpen: false }));
