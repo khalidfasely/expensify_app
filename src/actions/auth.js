@@ -6,7 +6,7 @@ export const login = (uid) => ({
 });
 
 export const startLogin = () => {
-    console.log('start login');
+    //console.log('start login');
     return () => {
         return firebase.auth().signInWithPopup(googleAuthProvider);
     };
@@ -14,7 +14,7 @@ export const startLogin = () => {
 
 //test
 export const startLoginWithGitHub = () => {
-    console.log('start login');
+    //console.log('start login');
     return () => {
         return firebase.auth().signInWithPopup(githubAuthProvider);
     };
